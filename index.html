@@ -1,0 +1,1990 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>EzAssign Blog – Study Abroad Guides for International Students</title>
+<meta name="description" content="EzAssign Blog: UK intakes, universities, visas, jobs, scholarships and student life guides for international students.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+:root {
+  --bg: #ffffff;
+  --fg: #0a0a0c;
+  --mut: #64748b;
+  --ln: #e2e8f0;
+  --cd: #f8fafc;
+  --bk: #0f172a;
+  --or: #ff6a1a;
+  --or-hover: #e55609;
+  --pill-bg: rgba(255, 255, 255, 0.95);
+  --glass-border: rgba(226, 232, 240, 0.9);
+  --card-shadow: 0 10px 30px -10px rgba(0,0,0,0.06);
+  --card-shadow-hover: 0 20px 40px -15px rgba(0,0,0,0.12);
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  --bg: #090d16;
+  --fg: #f8fafc;
+  --mut: #94a3b8;
+  --ln: #1e293b;
+  --cd: #0f172a;
+  --bk: #020617;
+  --or: #ff7a30;
+  --or-hover: #ff6a1a;
+  --pill-bg: rgba(15, 23, 42, 0.95);
+  --glass-border: rgba(30, 41, 59, 0.9);
+  --card-shadow: 0 10px 30px -10px rgba(0,0,0,0.3);
+  --card-shadow-hover: 0 20px 40px -15px rgba(0,0,0,0.5);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-padding-top: 100px; scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+a { color: inherit; text-decoration: none; }
+button, input, select, textarea { font: inherit; color: inherit; }
+
+header {
+  position: sticky;
+  top: 12px;
+  z-index: 40;
+  padding: 0 16px;
+}
+
+.pill {
+  position: relative;
+  max-width: 1180px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px 8px 24px;
+  border-radius: 999px;
+  border: 1px solid var(--glass-border);
+  background: var(--pill-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);
+}
+
+.brand {
+  color: var(--or);
+  font-weight: 800;
+  font-size: 22px;
+  letter-spacing: -.04em;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+.bl {
+  background: linear-gradient(135deg, var(--or), #ff9e66);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-left: 2px;
+}
+
+.links {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 4px;
+}
+.links a {
+  padding: 8px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--mut);
+  border-radius: 99px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.links a:hover {
+  color: var(--fg);
+  background: rgba(150,150,150,0.08);
+}
+
+.sp { flex: 1; }
+
+.btn {
+  border: 1px solid var(--ln);
+  background: transparent;
+  color: var(--fg);
+  border-radius: 99px;
+  padding: 9px 20px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.btn:hover {
+  background: var(--cd);
+  border-color: var(--mut);
+}
+.btn.k {
+  background: var(--fg);
+  color: var(--bg);
+  border-color: var(--fg);
+}
+.btn.k:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+.btn.or {
+  background: var(--or);
+  color: #ffffff;
+  border: none;
+  outline: none;
+  font-weight: 700;
+  box-shadow: 0 8px 20px rgba(255, 106, 26, 0.25);
+}
+.btn.or:hover {
+  background: var(--or-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(255, 106, 26, 0.35);
+}
+.btn.whatsapp {
+  background: #25d366;
+  color: #ffffff;
+  border: none;
+  font-weight: 700;
+  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
+}
+.btn.whatsapp:hover {
+  background: #20ba5a;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(37, 211, 102, 0.4);
+}
+.btn.instagram {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  color: #ffffff;
+  border: none;
+  font-weight: 700;
+  box-shadow: 0 8px 20px rgba(220, 39, 67, 0.3);
+}
+.btn.instagram:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(220, 39, 67, 0.4);
+}
+.btn.danger {
+  background: #ef4444;
+  color: #ffffff;
+  border: none;
+}
+.btn.danger:hover {
+  background: #dc2626;
+}
+.btn.sm { padding: 6px 14px; font-size: 13px; }
+.btn.wide { width: 100%; padding: 12px; }
+.mb { display: none; }
+
+#mm {
+  max-width: 1180px;
+  margin: 8px auto 0;
+  display: grid;
+  position: relative;
+  z-index: 39;
+}
+#mm:empty { display: none; }
+.mp {
+  background: var(--bg);
+  border: 1px solid var(--ln);
+  border-radius: 24px;
+  padding: 12px;
+  width: min(280px, 100%);
+  justify-self: end;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  animation: slideDown 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.mp a {
+  display: block;
+  padding: 10px 16px;
+  border-radius: 14px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--fg);
+}
+.mp a:hover { background: var(--cd); }
+
+.hero {
+  text-align: center;
+  padding: 50px 18px 20px;
+  overflow: hidden;
+  position: relative;
+}
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--cd);
+  border: 1px solid var(--ln);
+  color: var(--fg);
+  padding: 6px 18px;
+  border-radius: 99px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.badge:hover {
+  border-color: var(--or);
+  transform: scale(1.02);
+}
+.badge .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--or);
+  display: inline-block;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+.hero h1 {
+  font-size: clamp(36px, 6.5vw, 76px);
+  line-height: 1.05;
+  letter-spacing: -.04em;
+  font-weight: 800;
+  margin: 20px auto 16px;
+  max-width: 17ch;
+  background: linear-gradient(180deg, var(--fg) 0%, var(--mut) 140%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero p {
+  color: var(--mut);
+  font-size: clamp(15px, 1.8vw, 19px);
+  max-width: 56ch;
+  margin: 0 auto 24px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* Carousel Section */
+.arc-wrap {
+  max-width: 1180px;
+  margin: 20px auto 0;
+  padding: 0 20px;
+  position: relative;
+}
+.arc-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.arc {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 8px 4px 20px;
+  -webkit-overflow-scrolling: touch;
+}
+.arc::-webkit-scrollbar { height: 6px; }
+.arc::-webkit-scrollbar-thumb { background: var(--ln); border-radius: 99px; }
+
+.ac {
+  min-width: 310px;
+  width: 310px;
+  height: 350px;
+  flex: none;
+  scroll-snap-align: start;
+  border-radius: 28px;
+  color: #fff;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.18);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.15);
+}
+.ac img.bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  transition: transform 0.5s ease;
+}
+.ac:hover img.bg-img {
+  transform: scale(1.06);
+}
+.ac::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.85) 100%);
+  z-index: 1;
+}
+.ac > * { position: relative; z-index: 2; }
+.ac:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 45px rgba(0,0,0,0.3);
+  border-color: var(--or);
+}
+.pin-tag {
+  font-style: normal;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  background: var(--or);
+  color: #fff;
+  padding: 5px 12px;
+  border-radius: 99px;
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  box-shadow: 0 4px 12px rgba(255, 106, 26, 0.4);
+}
+.ac b {
+  font-size: 19px;
+  line-height: 1.3;
+  letter-spacing: -.02em;
+  font-weight: 700;
+  margin-top: auto;
+  display: block;
+}
+.ac-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  font-size: 12px;
+  opacity: 0.9;
+  color: #cbd5e1;
+}
+
+/* Bento Grid Section */
+.sec {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+.big {
+  font-size: clamp(28px, 4vw, 48px);
+  letter-spacing: -.04em;
+  line-height: 1.1;
+  font-weight: 800;
+  margin: 0 0 24px;
+  max-width: 22ch;
+}
+.big i { font-style: normal; color: var(--mut); font-weight: 400; }
+.lbl {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--or);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.bar {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.bar h2 {
+  margin: 0;
+  flex: 1;
+  min-width: 180px;
+  font-size: 32px;
+  letter-spacing: -.04em;
+  font-weight: 800;
+}
+.in {
+  width: 100%;
+  border-radius: 16px;
+  border: 1px solid var(--ln);
+  background: var(--cd);
+  color: var(--fg);
+  padding: 12px 16px;
+  margin-bottom: 12px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+.in:focus { border-color: var(--or); }
+.bar .in { width: auto; min-width: 240px; margin: 0; border-radius: 99px; }
+
+.chips { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 28px; }
+.chip {
+  border: 1px solid var(--ln);
+  background: transparent;
+  color: var(--mut);
+  border-radius: 99px;
+  padding: 8px 18px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+.chip:hover { color: var(--fg); background: var(--cd); }
+.chip.on { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+
+/* Bento Grid Layout & Cards */
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 24px;
+}
+.bento-card {
+  grid-column: span 6;
+  border: 1px solid var(--ln);
+  border-radius: 28px;
+  overflow: hidden;
+  background: var(--bg);
+  box-shadow: var(--card-shadow);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+.bento-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--card-shadow-hover);
+  border-color: var(--mut);
+}
+.cv {
+  height: 220px;
+  position: relative;
+  overflow: hidden;
+  background: var(--cd);
+}
+.cv img.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.bento-card:hover img.card-img {
+  transform: scale(1.05);
+}
+.cv-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.7) 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 18px 20px;
+  color: #fff;
+  z-index: 2;
+}
+.cv-overlay .cat-tag {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  background: rgba(0,0,0,0.65);
+  padding: 5px 12px;
+  border-radius: 8px;
+  backdrop-filter: blur(6px);
+  color: #fff;
+}
+.cv-overlay .rt-tag {
+  font-size: 12px;
+  font-weight: 700;
+  background: rgba(0,0,0,0.65);
+  padding: 5px 12px;
+  border-radius: 8px;
+  backdrop-filter: blur(6px);
+  color: #fff;
+}
+
+.cb {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.author-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+.author-name {
+  color: var(--or);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.author-name::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--or);
+  display: inline-block;
+}
+.pub-date {
+  color: var(--mut);
+  font-weight: 500;
+}
+.cb h3 {
+  margin: 6px 0 10px;
+  font-size: 21px;
+  line-height: 1.3;
+  letter-spacing: -.03em;
+  font-weight: 800;
+  color: var(--fg);
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.cb h3:hover { color: var(--or); }
+.cb p {
+  margin: 0 0 20px;
+  color: var(--mut);
+  font-size: 14.5px;
+  line-height: 1.6;
+  flex: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.card-bottom-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 16px;
+  border-top: 1px solid var(--ln);
+  margin-top: auto;
+  gap: 8px;
+}
+.action-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.like-pill, .pin-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid var(--ln);
+  padding: 6px 14px;
+  border-radius: 99px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--fg);
+  cursor: pointer;
+  transition: all 0.2s;
+  background: var(--bg);
+}
+.like-pill:hover {
+  border-color: #ef4444;
+  color: #ef4444;
+  background: rgba(239, 68, 68, 0.05);
+}
+.pin-btn:hover {
+  border-color: var(--or);
+  color: var(--or);
+}
+.pin-btn.pinned {
+  background: var(--or);
+  color: #ffffff;
+  border-color: var(--or);
+}
+
+.read-link {
+  color: var(--or);
+  font-weight: 700;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.read-link:hover {
+  transform: translateX(3px);
+}
+
+/* Pagination Styling */
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 40px;
+}
+.page-btn {
+  border: 1px solid var(--ln);
+  background: var(--bg);
+  color: var(--fg);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+.page-btn:hover {
+  border-color: var(--or);
+  color: var(--or);
+  background: var(--cd);
+}
+.page-btn.active {
+  background: var(--or);
+  color: #fff;
+  border-color: var(--or);
+  box-shadow: 0 4px 12px rgba(255, 106, 26, 0.3);
+}
+
+/* Coursework CTA Banner */
+.coursework-banner {
+  max-width: 1180px;
+  margin: 60px auto 20px;
+  padding: 0 20px;
+}
+.coursework-box {
+  background: linear-gradient(135deg, var(--bk) 0%, #1e293b 100%);
+  border-radius: 32px;
+  padding: 48px 36px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 20px 45px rgba(0,0,0,0.25);
+  border: 1px solid rgba(255,255,255,0.1);
+  position: relative;
+  overflow: hidden;
+}
+.coursework-box h2 {
+  font-size: clamp(24px, 3.5vw, 38px);
+  font-weight: 800;
+  letter-spacing: -.03em;
+  margin: 0 0 12px;
+  line-height: 1.2;
+}
+.coursework-box p {
+  color: #94a3b8;
+  font-size: 16px;
+  max-width: 50ch;
+  margin: 0 0 28px;
+}
+
+/* Country Cards for Intake Page */
+.country-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+  margin-top: 32px;
+}
+.country-card {
+  background: var(--cd);
+  border: 1px solid var(--ln);
+  border-radius: 24px;
+  padding: 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.country-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--or);
+  box-shadow: var(--card-shadow-hover);
+}
+.country-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+.country-flag {
+  font-size: 32px;
+}
+.country-card h3 {
+  margin: 0;
+  font-size: 19px;
+  font-weight: 800;
+  color: var(--fg);
+}
+.country-card p {
+  margin: 0 0 16px;
+  color: var(--mut);
+  font-size: 13.5px;
+  line-height: 1.5;
+}
+
+/* Accordion FAQ Styling */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 24px;
+}
+.faq-item {
+  border: 1px solid var(--ln);
+  border-radius: 20px;
+  background: var(--cd);
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+.faq-item:hover { border-color: var(--or); }
+.faq-question {
+  padding: 20px 24px;
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+.faq-question i {
+  color: var(--or);
+  transition: transform 0.3s ease;
+}
+.faq-answer {
+  padding: 0 24px 20px;
+  color: var(--mut);
+  font-size: 15px;
+  line-height: 1.65;
+  display: none;
+  border-top: 1px dashed var(--ln);
+  margin-top: 4px;
+  padding-top: 16px;
+}
+.faq-item.open .faq-answer { display: block; }
+.faq-item.open .faq-question i { transform: rotate(180deg); }
+
+/* Article View Page */
+article.post {
+  max-width: 860px;
+  margin: 30px auto 60px;
+  padding: 0 20px;
+}
+.ph {
+  border-radius: 32px;
+  padding: 44px 36px 36px;
+  color: #ffffff;
+  margin: 16px 0 32px;
+  box-shadow: 0 20px 45px rgba(0,0,0,0.22);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 320px;
+  background: var(--bk);
+}
+.ph img.ph-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+.ph-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.85) 100%);
+  z-index: 1;
+}
+.ph > * { position: relative; z-index: 2; }
+
+.ph-cat-badge {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  background: var(--or);
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 99px;
+  width: fit-content;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 12px rgba(255,106,26,0.3);
+}
+
+.ph h1 {
+  font-size: clamp(28px, 4.5vw, 46px);
+  line-height: 1.15;
+  letter-spacing: -.03em;
+  margin: 10px 0 16px;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.ph-meta-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-size: 14px;
+  color: #e2e8f0;
+  font-weight: 500;
+}
+.ph-meta-bar span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.ph-meta-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.6);
+}
+
+.post-body {
+  font-size: 16.5px;
+  line-height: 1.75;
+  color: var(--fg);
+  font-weight: 400;
+}
+.post-body h2 {
+  font-size: 24px;
+  font-weight: 800;
+  margin-top: 36px;
+  margin-bottom: 16px;
+  color: var(--fg);
+  letter-spacing: -.02em;
+}
+.post-body p {
+  margin-bottom: 20px;
+  color: var(--fg);
+  font-weight: 400;
+}
+.post-body img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 16px;
+  margin: 24px 0;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+.post-body ul {
+  list-style-type: disc;
+  padding-left: 24px;
+  margin-bottom: 24px;
+}
+.post-body li {
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+.post-body strong, .post-body b {
+  font-weight: 700;
+}
+.call {
+  background: var(--cd);
+  border-left: 4px solid var(--or);
+  padding: 18px 22px;
+  border-radius: 0 16px 16px 0;
+  margin: 28px 0;
+  font-size: 15.5px;
+}
+
+.article-action-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid var(--ln);
+  flex-wrap: wrap;
+}
+.btn-helpful {
+  border: 1px solid var(--ln);
+  background: var(--bg);
+  color: var(--fg);
+  border-radius: 99px;
+  padding: 12px 24px;
+  font-weight: 700;
+  font-size: 14.5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.btn-helpful:hover {
+  border-color: var(--or);
+  color: var(--or);
+  background: var(--cd);
+}
+
+/* Editor & Form Styling */
+.editor-tb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 10px;
+  background: var(--cd);
+  border: 1px solid var(--ln);
+  border-bottom: none;
+  border-radius: 16px 16px 0 0;
+}
+.tb-btn {
+  background: var(--bg);
+  border: 1px solid var(--ln);
+  color: var(--fg);
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.tb-btn:hover {
+  border-color: var(--or);
+  color: var(--or);
+}
+.editor-box {
+  min-height: 220px;
+  max-height: 480px;
+  overflow-y: auto;
+  padding: 18px;
+  border: 1px solid var(--ln);
+  border-radius: 0 0 16px 16px;
+  background: var(--bg);
+  color: var(--fg);
+  outline: none;
+  font-weight: 400;
+}
+.editor-box:focus { border-color: var(--or); }
+.editor-box img {
+  max-width: 100%;
+  border-radius: 12px;
+  margin: 12px 0;
+  display: block;
+}
+
+/* Footer Styling */
+footer {
+  background: #121316;
+  color: #fff;
+  margin-top: 80px;
+  border-radius: 44px 44px 0 0;
+  padding: 60px 0 32px;
+  border-top: 1px solid #24252a;
+}
+.fg {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1.5fr repeat(4, 1fr);
+  gap: 32px;
+}
+.fg h4 {
+  margin: 0 0 14px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #94a3b8;
+}
+.fg a {
+  display: block;
+  color: #cbd5e1;
+  font-size: 14.5px;
+  padding: 4px 0;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+.fg a:hover { color: var(--or); }
+.fg p { color: #94a3b8; font-size: 14px; margin: 12px 0 0; line-height: 1.6; }
+.social-icons { display: flex; gap: 12px; margin-top: 18px; flex-wrap: wrap; }
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #24252a;
+  color: #cbd5e1;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+.social-btn:hover {
+  background: var(--or);
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(255, 106, 26, 0.4);
+}
+.social-btn i { font-size: 18px; }
+.fb {
+  max-width: 1180px;
+  margin: 40px auto 0;
+  padding: 24px 20px 0;
+  border-top: 1px solid #24252a;
+  color: #64748b;
+  font-size: 13.5px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+@media(max-width: 1024px) {
+  .bento-card { grid-column: span 12; }
+}
+@media(max-width: 880px) {
+  .links { display: none; }
+  .mb { display: inline-flex; }
+  .fg { grid-template-columns: 1fr 1fr; }
+}
+@media(max-width: 640px) {
+  .fg { grid-template-columns: 1fr; }
+  .article-action-bar { flex-direction: column; align-items: stretch; }
+  .article-action-bar .btn { width: 100%; }
+}
+</style>
+</head>
+
+<body>
+<header>
+  <nav class="pill">
+    <a class="brand" onclick="go('home')">EzAssign <span class="bl">Blog</span></a>
+    <div class="links">
+      <a onclick="toSec('art')"><i class="fa-regular fa-newspaper"></i> Articles</a>
+      <a onclick="go('intake-hub')"><i class="fa-solid fa-graduation-cap"></i> Jan 2027 Intake</a>
+      <a onclick="toSec('faq')"><i class="fa-regular fa-circle-question"></i> FAQ</a>
+      <a onclick="go('support')"><i class="fa-solid fa-headset"></i> Support</a>
+    </div>
+    <span class="sp"></span>
+    <button class="btn" id="th" onclick="toggleTheme()" title="Toggle Theme">🌓 Mode</button>
+    <button class="btn mb" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i> Menu</button>
+  </nav>
+  <div id="mm"></div>
+</header>
+
+<main id="app">
+  <!-- Dynamic JS Views -->
+</main>
+
+<footer id="footer">
+  <div class="fg">
+    <div>
+      <a class="brand" onclick="go('home')">EzAssign <span class="bl">Blog</span></a>
+      <p>Your trusted academic advisory platform for study abroad applications, UK university intakes, visa guidance, and assignment assistance.</p>
+      <div class="social-icons">
+        <a class="social-btn" href="https://www.instagram.com/ezassign" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a class="social-btn" href="https://www.linkedin.com/company/ezassign/" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a class="social-btn" href="https://ezassign.uk/" target="_blank" title="Academic Help Website"><i class="fa-solid fa-globe"></i></a>
+        <a class="social-btn" href="https://www.youtube.com/@ezassign" target="_blank" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+    <div>
+      <h4>Categories</h4>
+      <a onclick="filterCat('Admissions')">Admissions</a>
+      <a onclick="filterCat('Universities')">Universities</a>
+      <a onclick="filterCat('Visa')">Visa &amp; Immigration</a>
+      <a onclick="filterCat('Finance')">Scholarships &amp; Finance</a>
+    </div>
+    <div>
+      <h4>Intakes</h4>
+      <a onclick="go('intake-hub')">January 2027 Intake</a>
+      <a onclick="go('home')">September 2027</a>
+      <a onclick="go('home')">May 2027</a>
+    </div>
+    <div>
+      <h4>Author Platform</h4>
+      <a onclick="go('publish')" style="color:var(--or);font-weight:700;"><i class="fa-solid fa-pen-to-square"></i> Author Desk / Publish Article</a>
+      <a onclick="go('home')">Editorial Policy</a>
+      <a onclick="go('home')">Privacy Policy</a>
+    </div>
+    <div>
+      <h4>Support</h4>
+      <a onclick="go('support')"><i class="fa-solid fa-headset"></i> Request Call Back</a>
+      <a onclick="toSec('faq')">Help Center &amp; FAQ</a>
+      <a onclick="go('support')">Contact Advisory</a>
+      <a onclick="go('home')">Student Community</a>
+    </div>
+  </div>
+  <div class="fb">
+    <span>© 2026 EzAssign Academic Support. All rights reserved.</span>
+    <span>Empowering International Students Worldwide</span>
+  </div>
+</footer>
+
+<script>
+const DEFAULT_FALLBACK_IMG = 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1200&auto=format&fit=crop';
+
+const INITIAL_ARTICLES = [
+  {
+    id: 'ezassign-trusted-partner',
+    title: 'EzAssign: Your Trusted Partner for International Student Success and University Support',
+    category: 'Universities',
+    author: 'Anish',
+    date: 'Just Now',
+    timestamp: Date.now(),
+    readTime: '5 min read',
+    isPinned: true,
+    likes: 92,
+    img: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop',
+    desc: 'Navigating higher education—whether adapting to international university standards or managing strict coursework deadlines—requires clear structure and expert guidance.',
+    content: `
+      <h2>Comprehensive Academic Support for Global Students</h2>
+      <p>EzAssign is dedicated to providing high-quality, reliable academic assistance and university guidance tailored to international students pursuing degrees in the UK, Canada, Australia, and beyond.</p>
+    `
+  },
+  {
+    id: 'working-part-time-abroad-2027',
+    title: 'Working Part-Time While Studying Abroad: New Hour Limits for 2027',
+    category: 'Careers',
+    author: 'EzAssign',
+    date: 'Just Now',
+    timestamp: Date.now() - 1000,
+    readTime: '5 min read',
+    isPinned: true,
+    likes: 22,
+    img: 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?q=80&w=1200&auto=format&fit=crop',
+    desc: 'Managing student living expenses while pursuing a degree often relies on part-time jobs. Government regulations regarding off-campus work hours vary significantly by destination.',
+    content: `
+      <h2>20-Hour Weekly Work Limits</h2>
+      <p>During official academic terms, international students holding student visas can legally work up to 20 hours per week in major destinations like the UK and Australia.</p>
+    `
+  },
+  {
+    id: 'australia-gs-test-guide',
+    title: 'Australia’s Genuine Student (GS) Test: How to Write 150-Word Answers That Win Visas',
+    category: 'Admissions',
+    author: 'EzAssign',
+    date: 'Just Now',
+    timestamp: Date.now() - 2000,
+    readTime: '5 min read',
+    isPinned: false,
+    likes: 8,
+    img: 'https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?q=80&w=1200&auto=format&fit=crop',
+    desc: 'The Genuine Student (GS) requirement replaced the traditional Statement of Purpose essay for Australian Student Visas. Learn how to craft winning responses.',
+    content: `
+      <h2>Mastering the Australian GS Requirement</h2>
+      <p>Instead of submitting a single lengthy essay, applicants must answer targeted questions within concise word limits demonstrating genuine intent to study.</p>
+    `
+  },
+  {
+    id: 'uk-graduate-visa-policy-2027',
+    title: 'UK Graduate Visa Policy (PSW): What January 2027 Applicants Need to Know',
+    category: 'Visa',
+    author: 'EzAssign Editorial Team',
+    date: 'Just Now',
+    timestamp: Date.now() - 3000,
+    readTime: '5 min read',
+    isPinned: true,
+    likes: 122,
+    img: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=1200&auto=format&fit=crop',
+    desc: 'The UK Post-Study Work route gives international graduates time to gain work experience. Stay informed on recent policy rules and application timelines.',
+    content: `
+      <h2>Post-Study Work Route Details</h2>
+      <p>Graduates completing an eligible undergraduate or master's degree can apply for a 2-year post-study work visa without needing an immediate employer sponsorship.</p>
+    `
+  },
+  {
+    id: 'uk-jan-2027-intake-guide',
+    title: 'UK January 2027 Intake: Deadlines, Courses & How to Apply',
+    category: 'Admissions',
+    author: 'EzAssign Editorial Team',
+    date: '1 Nov 2026',
+    timestamp: 1761955200000,
+    readTime: '6 min read',
+    isPinned: true,
+    likes: 361,
+    img: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1200&auto=format&fit=crop',
+    desc: 'Everything you need to know about starting a UK degree in January 2027: deadlines, top universities, available courses, and step-by-step application guidance.',
+    content: `
+      <h2>Why Choose the January 2027 Intake?</h2>
+      <p>While the traditional September intake remains popular, the January intake has rapidly gained momentum. For students who missed autumn deadlines, January 2027 is an exceptional opportunity.</p>
+    `
+  },
+  {
+    id: 'study-in-canada-sept-2027',
+    title: 'Study in Canada: September 2027 Fall Intake Guide',
+    category: 'Admissions',
+    author: 'EzAssign Editorial Desk',
+    date: 'Just Now',
+    timestamp: Date.now() - 4000,
+    readTime: '5 min read',
+    isPinned: true,
+    likes: 15,
+    img: 'https://images.unsplash.com/photo-1517935706615-2717063c2225?q=80&w=1200&auto=format&fit=crop',
+    desc: 'Complete overview of Canadian Fall 2027 admissions, SDS visa requirements, top universities, and Co-op opportunities for international students.',
+    content: `
+      <h2>Why Choose September 2027?</h2>
+      <p>Fall entry provides full course availability and maximum access to institutional entrance scholarships.</p>
+    `
+  },
+  {
+    id: 'best-uk-universities',
+    title: 'Best Universities in the UK for International Students',
+    category: 'Universities',
+    author: 'Dr. Robert Chen',
+    date: '28 Oct 2026',
+    timestamp: 1761609600000,
+    readTime: '8 min read',
+    isPinned: true,
+    likes: 215,
+    img: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=1200&auto=format&fit=crop',
+    desc: 'A practical guide to top UK universities, how rankings work, student satisfaction scores, and choosing the right fit for your career goals.',
+    content: `
+      <h2>Selecting the Right Campus</h2>
+      <p>Choosing a university goes beyond global rank numbers. Consider campus facilities, graduate employment rates, and placement years.</p>
+    `
+  },
+  {
+    id: 'fully-funded-scholarships-uk',
+    title: 'How to Get a Fully Funded Scholarship to Study in the UK',
+    category: 'Finance',
+    author: 'EzAssign Editorial Team',
+    date: 'Just Now',
+    timestamp: Date.now() - 5000,
+    readTime: '5 min read',
+    isPinned: true,
+    likes: 89,
+    img: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1200&auto=format&fit=crop',
+    desc: 'Studying in the UK can be affordable if you strategically target government and institutional financial aid. Learn about Chevening and Commonwealth schemes.',
+    content: `
+      <h2>UK Scholarship Routes</h2>
+      <p>Discover major government-funded schemes alongside university merit awards to cover full tuition and living allowances.</p>
+    `
+  }
+];
+
+const FAQ_DATA = [
+  {
+    q: "Which type of services does EzAssign provide?",
+    a: "EzAssign provides comprehensive academic coaching, coursework guidance, dissertation formatting support, and university application advisory tailored specifically for international students."
+  },
+  {
+    q: "How can EzAssign help international students?",
+    a: "We assist international students in maintaining high academic standards, navigating complex university marking rubrics, preparing SOPs/CVs, and meeting assignment deadlines stress-free."
+  },
+  {
+    q: "What is the UK January 2027 Intake deadline?",
+    a: "Most UK universities accept applications for the January intake until November 2026. However, applying between May and August 2026 ensures faster CAS processing and visa approval."
+  },
+  {
+    q: "Are EzAssign academic writing services plagiarism-free?",
+    a: "Yes! All guidance and academic materials prepared by EzAssign strictly adhere to original research, university academic integrity rules, and rigorous quality checks."
+  },
+  {
+    q: "How fast can EzAssign deliver urgent assignment assistance?",
+    a: "We offer expedited academic support with turnarounds as fast as 24 to 48 hours for urgent coursework deadlines."
+  }
+];
+
+const COUNTRIES_INTAKE_DATA = [
+  {
+    code: 'united-kingdom',
+    name: 'United Kingdom',
+    flag: '🇬🇧',
+    desc: 'Renowned for world-class 1-year Master’s degrees and 2-year Post-Study Work options.',
+    details: [
+      'The United Kingdom remains one of the top choices for global students due to intensive 1-year Master degrees and diverse intakes.',
+      'January 2027 Intake applications open early in 2026. Applying early provides ample time to secure your CAS letter and complete UKVI visa processing.',
+      'Key Deadlines:',
+      '• Application Window: May 2026 – November 2026',
+      '• CAS Deadline: Early December 2026',
+      '• Course Start: January / February 2027'
+    ]
+  },
+  {
+    code: 'canada',
+    name: 'Canada',
+    flag: '🇨🇦',
+    desc: 'Fall & Winter intakes, SDS study permits, top research universities, and PGWP paths.',
+    details: [
+      'Canada offers high quality of life, top research institutions, and structured post-graduation work permit (PGWP) pathways.',
+      'September (Fall) and January (Winter) entry points allow international students to enroll across diploma, bachelor, and master degree options.'
+    ]
+  },
+  {
+    code: 'australia',
+    name: 'Australia',
+    flag: '🇦🇺',
+    desc: 'Semester 1 & 2 intakes, Genuine Student (GS) assessment, and post-study work rights.',
+    details: [
+      'Australia provides world-class university campuses in Sydney, Melbourne, Brisbane, and Perth with flexible mid-year entry windows.'
+    ]
+  },
+  {
+    code: 'usa',
+    name: 'United States',
+    flag: '🇺🇸',
+    desc: 'Spring & Fall entry, OPT STEM extensions, and extensive scholarship funding.',
+    details: [
+      'The USA offers diverse academic programs, cutting-edge research facilities, and broad scholarship support for international candidates.'
+    ]
+  }
+];
+
+// Smart article loader: Merges newly deployed code articles into localStorage
+function loadArticles() {
+  try {
+    const saved = localStorage.getItem('ez_blog_posts');
+    if (saved) {
+      const parsed = JSON.parse(saved);
+      const existingIds = new Set(parsed.map(p => p.id));
+      const missingCore = INITIAL_ARTICLES.filter(p => !existingIds.has(p.id));
+      const merged = [...missingCore, ...parsed];
+      localStorage.setItem('ez_blog_posts', JSON.stringify(merged));
+      return merged;
+    }
+  } catch (e) {
+    console.warn("LocalStorage load error:", e);
+  }
+  return INITIAL_ARTICLES;
+}
+
+function saveArticles() {
+  try {
+    localStorage.setItem('ez_blog_posts', JSON.stringify(articles));
+  } catch (e) {
+    console.warn("LocalStorage save error:", e);
+  }
+}
+
+let articles = loadArticles();
+let activeCategory = 'All';
+let searchQuery = '';
+let currentPage = 1;
+const ARTICLES_PER_PAGE = 15;
+let uploadedImageBase64 = '';
+
+function toggleTheme() {
+  const root = document.documentElement;
+  const isDark = root.getAttribute('data-theme') === 'dark';
+  const next = isDark ? 'light' : 'dark';
+  root.setAttribute('data-theme', next);
+  localStorage.setItem('ez_theme', next);
+}
+
+const savedTheme = localStorage.getItem('ez_theme') || 'light';
+document.documentElement.setAttribute('data-theme', savedTheme);
+
+function toggleMenu() {
+  const mm = document.getElementById('mm');
+  if (mm.innerHTML === '') {
+    mm.innerHTML = `
+      <div class="mp">
+        <a onclick="toSec('art'); toggleMenu();"><i class="fa-regular fa-newspaper"></i> Articles</a>
+        <a onclick="go('intake-hub'); toggleMenu();"><i class="fa-solid fa-graduation-cap"></i> Jan 2027 Intake</a>
+        <a onclick="toSec('faq'); toggleMenu();"><i class="fa-regular fa-circle-question"></i> FAQ</a>
+        <a onclick="go('support'); toggleMenu();"><i class="fa-solid fa-headset"></i> Support</a>
+        <a onclick="go('publish'); toggleMenu();" style="color:var(--or);"><i class="fa-solid fa-pen-to-square"></i> Author Desk</a>
+      </div>
+    `;
+  } else {
+    mm.innerHTML = '';
+  }
+}
+
+function go(route) {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  const app = document.getElementById('app');
+
+  if (route === 'home') {
+    renderHome();
+  } else if (route === 'intake-hub') {
+    renderIntakeHub();
+  } else if (route.startsWith('country-')) {
+    const countryCode = route.replace('country-', '');
+    renderCountryDetail(countryCode);
+  } else if (route === 'publish') {
+    renderPublish();
+  } else if (route.startsWith('edit-')) {
+    const artId = route.replace('edit-', '');
+    renderPublish(artId);
+  } else if (route === 'support') {
+    renderSupport();
+  } else {
+    const art = articles.find(a => a.id === route);
+    if (art) renderArticle(art.id);
+    else renderHome();
+  }
+}
+
+function toSec(secId) {
+  if (!document.getElementById(secId)) {
+    renderHome();
+    setTimeout(() => {
+      const el = document.getElementById(secId);
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    }, 50);
+  } else {
+    const el = document.getElementById(secId);
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  }
+}
+
+function filterCat(cat) {
+  activeCategory = cat;
+  currentPage = 1;
+  if (!document.getElementById('art')) {
+    renderHome();
+  } else {
+    renderBentoGrid();
+    renderChips();
+  }
+}
+
+function filterSearch(q) {
+  searchQuery = q.toLowerCase();
+  currentPage = 1;
+  renderBentoGrid();
+}
+
+function changePage(page) {
+  currentPage = page;
+  renderBentoGrid();
+  const artSec = document.getElementById('art');
+  if (artSec) artSec.scrollIntoView({ behavior: 'smooth' });
+}
+
+function toggleLike(id, event) {
+  if (event) event.stopPropagation();
+  const art = articles.find(a => a.id === id);
+  if (art) {
+    art.likes = (art.likes || 0) + 1;
+    saveArticles();
+    if (document.getElementById('art')) renderBentoGrid();
+    const lEl = document.getElementById(`like-count-${id}`);
+    if (lEl) lEl.innerText = art.likes;
+  }
+}
+
+function togglePin(id, event) {
+  if (event) event.stopPropagation();
+  const art = articles.find(a => a.id === id);
+  if (art) {
+    art.isPinned = !art.isPinned;
+    saveArticles();
+    renderHome();
+  }
+}
+
+function deleteArticle(id) {
+  if (confirm("Are you sure you want to delete this article? This action cannot be undone.")) {
+    articles = articles.filter(a => a.id !== id);
+    saveArticles();
+    go('home');
+  }
+}
+
+function renderChips() {
+  const categories = ['All', 'Admissions', 'Universities', 'Visa', 'Careers', 'Finance'];
+  const container = document.getElementById('chips-container');
+  if (!container) return;
+  container.innerHTML = categories.map(cat => `
+    <button class="chip ${activeCategory === cat ? 'on' : ''}" onclick="filterCat('${cat}')">${cat}</button>
+  `).join('');
+}
+
+function renderCarousel() {
+  const carousel = document.getElementById('pinned-carousel');
+  if (!carousel) return;
+  const pinned = articles.filter(a => a.isPinned);
+  if (pinned.length === 0) {
+    document.getElementById('carousel-section').style.display = 'none';
+    return;
+  }
+  document.getElementById('carousel-section').style.display = 'block';
+  carousel.innerHTML = pinned.map(art => `
+    <div class="ac" onclick="go('${art.id}')">
+      <img src="${art.img || DEFAULT_FALLBACK_IMG}" class="bg-img" alt="${art.title}" onerror="this.src='${DEFAULT_FALLBACK_IMG}'">
+      <div class="pin-tag"><i class="fa-solid fa-thumbtack"></i> Featured</div>
+      <b>${art.title}</b>
+      <div class="ac-meta">
+        <span><i class="fa-regular fa-clock"></i> ${art.readTime || '5 min read'}</span>
+        <span><i class="fa-regular fa-heart"></i> ${art.likes || 0}</span>
+      </div>
+    </div>
+  `).join('');
+}
+
+function renderBentoGrid() {
+  const grid = document.getElementById('bento-grid');
+  const paginationContainer = document.getElementById('pagination-container');
+  if (!grid) return;
+
+  let filtered = articles.filter(art => {
+    const matchCat = activeCategory === 'All' || art.category === activeCategory;
+    const matchSearch = !searchQuery || 
+      art.title.toLowerCase().includes(searchQuery) || 
+      art.desc.toLowerCase().includes(searchQuery) ||
+      (art.category && art.category.toLowerCase().includes(searchQuery));
+    return matchCat && matchSearch;
+  });
+
+  if (filtered.length === 0) {
+    grid.innerHTML = `
+      <div style="grid-column: span 12; text-align: center; padding: 60px 20px; color: var(--mut);">
+        <i class="fa-regular fa-folder-open" style="font-size: 48px; margin-bottom: 16px; display: block;"></i>
+        <h3 style="font-size: 20px; font-weight: 700; color: var(--fg);">No Articles Found</h3>
+        <p>Try adjusting your search query or selecting another category.</p>
+      </div>
+    `;
+    if (paginationContainer) paginationContainer.innerHTML = '';
+    return;
+  }
+
+  const totalPages = Math.ceil(filtered.length / ARTICLES_PER_PAGE);
+  if (currentPage > totalPages) currentPage = totalPages;
+  if (currentPage < 1) currentPage = 1;
+
+  const startIndex = (currentPage - 1) * ARTICLES_PER_PAGE;
+  const paginatedArticles = filtered.slice(startIndex, startIndex + ARTICLES_PER_PAGE);
+
+  grid.innerHTML = paginatedArticles.map(art => `
+    <div class="bento-card">
+      <div class="cv" onclick="go('${art.id}')" style="cursor:pointer;">
+        <img src="${art.img || DEFAULT_FALLBACK_IMG}" class="card-img" alt="${art.title}" onerror="this.src='${DEFAULT_FALLBACK_IMG}'">
+        <div class="cv-overlay">
+          <span class="cat-tag">${art.category || 'General'}</span>
+          <span class="rt-tag"><i class="fa-regular fa-clock"></i> ${art.readTime || '5 min read'}</span>
+        </div>
+      </div>
+      <div class="cb">
+        <div class="author-line">
+          <span class="author-name">${art.author || 'EzAssign Advisory'}</span>
+          <span class="pub-date">${art.date || 'Recent'}</span>
+        </div>
+        <h3 onclick="go('${art.id}')">${art.title}</h3>
+        <p>${art.desc || ''}</p>
+        <div class="card-bottom-row">
+          <div class="action-group">
+            <button class="like-pill" onclick="toggleLike('${art.id}', event)">
+              <i class="fa-regular fa-heart"></i> <span id="like-count-${art.id}">${art.likes || 0}</span>
+            </button>
+            <button class="pin-btn ${art.isPinned ? 'pinned' : ''}" onclick="togglePin('${art.id}', event)" title="Pin Article">
+              <i class="fa-solid fa-thumbtack"></i>
+            </button>
+          </div>
+          <a class="read-link" onclick="go('${art.id}')">Read Full Article <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  `).join('');
+
+  if (paginationContainer) {
+    if (totalPages > 1) {
+      let paginationHtml = '';
+      for (let i = 1; i <= totalPages; i++) {
+        paginationHtml += `<button class="page-btn ${currentPage === i ? 'active' : ''}" onclick="changePage(${i})">${i}</button>`;
+      }
+      paginationContainer.innerHTML = paginationHtml;
+      paginationContainer.style.display = 'flex';
+    } else {
+      paginationContainer.innerHTML = '';
+      paginationContainer.style.display = 'none';
+    }
+  }
+}
+
+function renderHome() {
+  const app = document.getElementById('app');
+  app.innerHTML = `
+    <section class="hero">
+      <div class="badge" onclick="go('intake-hub')">
+        <span class="dot"></span> Official UK &amp; Global Admissions Portal &bull; Jan 2027 Open
+      </div>
+      <h1>Master Your Study Abroad Journey</h1>
+      <p>Verified admissions deadlines, university comparison breakdowns, visa filing checklists, and personalized academic guidance for international students.</p>
+    </section>
+
+    <div id="carousel-section" class="arc-wrap">
+      <div class="arc-header">
+        <div class="lbl" style="margin:0;"><i class="fa-solid fa-star"></i> Featured Editorial Guides</div>
+      </div>
+      <div id="pinned-carousel" class="arc"></div>
+    </div>
+
+    <section id="art" class="sec">
+      <div class="bar">
+        <h2>Latest Advisory Articles</h2>
+        <input type="text" class="in" placeholder="Search articles, guides, visa topics..." oninput="filterSearch(this.value)">
+      </div>
+      <div id="chips-container" class="chips"></div>
+      <div id="bento-grid" class="bento-grid"></div>
+      <div id="pagination-container" class="pagination-container"></div>
+    </section>
+
+    <section class="coursework-banner">
+      <div class="coursework-box">
+        <h2>Need help in your Coursework, while studying abroad?</h2>
+        <p>Contact EzAssign for expert academic support, dissertation guidance, and professional assignment assistance tailored to your university standards.</p>
+        <a href="https://wa.me/919256466594?text=Hey%20EzAssign.%0AI%20checked%20your%20service%20on%20EzAssign.Blog.%0AI%20need%20help%20in%20my%20Assignment." target="_blank" class="btn whatsapp" style="padding: 14px 28px; font-size: 16px;">
+          <i class="fa-brands fa-whatsapp" style="font-size: 20px;"></i> Contact via WhatsApp (+91-9256466594)
+        </a>
+      </div>
+    </section>
+
+    <section id="faq" class="sec">
+      <div class="lbl"><i class="fa-regular fa-circle-question"></i> Help &amp; Knowledge Base</div>
+      <h2 class="big">Frequently Asked <i>Questions</i></h2>
+      <div class="faq-list">
+        ${FAQ_DATA.map(item => `
+          <div class="faq-item" onclick="this.classList.toggle('open')">
+            <div class="faq-question">
+              <span>${item.q}</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">${item.a}</div>
+          </div>
+        `).join('')}
+      </div>
+    </section>
+  `;
+
+  renderCarousel();
+  renderChips();
+  renderBentoGrid();
+}
+
+function renderIntakeHub() {
+  const app = document.getElementById('app');
+  app.innerHTML = `
+    <section class="sec" style="max-width: 1180px; margin: 20px auto;">
+      <button class="btn sm" onclick="go('home')" style="margin-bottom: 24px;"><i class="fa-solid fa-arrow-left"></i> Back to Home</button>
+
+      <div style="text-align: center; max-width: 750px; margin: 0 auto 40px;">
+        <div class="lbl" style="justify-content: center;"><i class="fa-solid fa-globe"></i> Global Study Abroad Portal</div>
+        <h1 style="font-size: clamp(32px, 5vw, 48px); font-weight: 800; letter-spacing: -.03em; margin: 12px 0 16px;">January 2027 Intake &amp; Global Admissions Hub</h1>
+        <p style="color: var(--mut); font-size: 17px; line-height: 1.6;">Embarking on your higher education abroad opens doors to global career opportunities, world-class academic networks, and life-changing cultural experiences.</p>
+      </div>
+
+      <div style="margin-top: 40px;">
+        <h2 style="font-size: 28px; font-weight: 800; letter-spacing: -.03em; margin-bottom: 8px; text-align: center;">Select Your Destination Country</h2>
+        <p style="text-align: center; color: var(--mut); margin-bottom: 28px;">Explore top universities, intake guidelines, and direct advisory support.</p>
+
+        <div class="country-grid">
+          ${COUNTRIES_INTAKE_DATA.map(c => `
+            <div class="country-card" onclick="go('country-${c.code}')">
+              <div>
+                <div class="country-header">
+                  <span class="country-flag">${c.flag}</span>
+                  <h3>${c.name}</h3>
+                </div>
+                <p>${c.desc}</p>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--ln); padding-top: 12px; margin-top: auto;">
+                <span style="font-size: 13px; font-weight: 700; color: var(--or);">Jan 2027 Guide</span>
+                <span class="read-link">Explore <i class="fa-solid fa-arrow-right"></i></span>
+              </div>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    </section>
+  `;
+}
+
+function renderCountryDetail(countryCode) {
+  const country = COUNTRIES_INTAKE_DATA.find(c => c.code === countryCode);
+  if (!country) {
+    renderIntakeHub();
+    return;
+  }
+
+  const app = document.getElementById('app');
+  app.innerHTML = `
+    <section class="sec" style="max-width: 860px; margin: 30px auto 60px;">
+      <button class="btn sm" onclick="go('intake-hub')" style="margin-bottom: 24px;"><i class="fa-solid fa-arrow-left"></i> Back to Intake Hub</button>
+
+      <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 20px;">
+        <span style="font-size: 48px;">${country.flag}</span>
+        <div>
+          <div class="lbl"><i class="fa-solid fa-graduation-cap"></i> January 2027 Intake Guide</div>
+          <h1 style="font-size: clamp(32px, 4.5vw, 42px); font-weight: 800; margin: 0; letter-spacing: -.03em;">Study in ${country.name}</h1>
+        </div>
+      </div>
+
+      <div class="post-body" style="background: var(--cd); border: 1px solid var(--ln); border-radius: 28px; padding: 36px; margin-bottom: 36px;">
+        <h3 style="font-size: 20px; font-weight: 800; margin-top: 0; margin-bottom: 16px; color: var(--or);">Why Study in ${country.name} &amp; 2027 Intake Highlights</h3>
+        ${country.details.map(para => `<p>${para}</p>`).join('')}
+      </div>
+
+      <div style="background: var(--bk); border-radius: 28px; padding: 36px; color: #fff; text-align: center; border: 1px solid rgba(255,255,255,0.1);">
+        <h3 style="font-size: 24px; font-weight: 800; margin-top: 0; margin-bottom: 12px;">Connect with EzAssign Advisory</h3>
+        <p style="color: #94a3b8; max-width: 50ch; margin: 0 auto 28px; font-size: 15px;">Get expert study guidance directly through our official channels.</p>
+        
+        <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+          <a href="https://wa.me/919256466594?text=Hey%20EzAssign.%0AI%20checked%20your%20service%20on%20EzAssign.Blog.%0AI%20need%20help%20with%20studying%20in%20${encodeURIComponent(country.name)}." target="_blank" class="btn whatsapp" style="padding: 12px 24px; font-size: 15px;">
+            <i class="fa-brands fa-whatsapp"></i> Contact on WhatsApp (+91-9256466594)
+          </a>
+        </div>
+      </div>
+    </section>
+  `;
+}
+
+function renderArticle(artId) {
+  const art = articles.find(a => a.id === artId);
+  if (!art) {
+    renderHome();
+    return;
+  }
+
+  const app = document.getElementById('app');
+  app.innerHTML = `
+    <article class="post">
+      <button class="btn sm" onclick="go('home')" style="margin-bottom: 16px;"><i class="fa-solid fa-arrow-left"></i> Back to All Articles</button>
+      
+      <div class="ph">
+        <img src="${art.img || DEFAULT_FALLBACK_IMG}" class="ph-bg" alt="${art.title}" onerror="this.src='${DEFAULT_FALLBACK_IMG}'">
+        <div class="ph-overlay"></div>
+        <div class="ph-cat-badge">${art.category || 'Admissions'}</div>
+        <h1>${art.title}</h1>
+        <div class="ph-meta-bar">
+          <span><i class="fa-regular fa-user"></i> ${art.author || 'EzAssign Desk'}</span>
+          <span class="ph-meta-dot"></span>
+          <span><i class="fa-regular fa-calendar"></i> ${art.date || 'Recent'}</span>
+          <span class="ph-meta-dot"></span>
+          <span><i class="fa-regular fa-clock"></i> ${art.readTime || '5 min read'}</span>
+        </div>
+      </div>
+
+      <div class="post-body">
+        ${art.content || `<p>${art.desc}</p>`}
+      </div>
+
+      <div class="article-action-bar">
+        <div style="display:flex; gap:12px; align-items:center;">
+          <button class="btn-helpful" onclick="toggleLike('${art.id}')">
+            <i class="fa-regular fa-thumbs-up"></i> Helpful (<span id="like-count-${art.id}">${art.likes || 0}</span>)
+          </button>
+          <button class="btn" onclick="go('edit-${art.id}')" title="Edit Article">
+            <i class="fa-solid fa-pen-to-square"></i> Edit
+          </button>
+        </div>
+        <button class="btn whatsapp" onclick="window.open('https://wa.me/919256466594?text=Hey%20EzAssign.%0AI%20checked%20your%20service%20on%20EzAssign.Blog.%0AI%20need%20help%20in%20my%20Assignment.', '_blank')">
+          <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+        </button>
+      </div>
+    </article>
+  `;
+}
+
+function renderPublish(editId = null) {
+  const isEditing = Boolean(editId);
+  const targetArt = isEditing ? articles.find(a => a.id === editId) : null;
+  uploadedImageBase64 = targetArt ? targetArt.img : '';
+
+  const app = document.getElementById('app');
+  app.innerHTML = `
+    <section class="sec" style="max-width: 800px; margin: 20px auto;">
+      <button class="btn sm" onclick="go('home')" style="margin-bottom: 20px;"><i class="fa-solid fa-arrow-left"></i> Back to Main Feed</button>
+      
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+        <h2 class="big" style="margin: 0;">${isEditing ? 'Edit Article' : 'Author Desk: Publish Guide'}</h2>
+        ${isEditing ? `
+          <button class="btn danger sm" onclick="deleteArticle('${targetArt.id}')">
+            <i class="fa-solid fa-trash"></i> Delete Article
+          </button>
+        ` : ''}
+      </div>
+
+      <form onsubmit="handlePublishSubmit(event, '${isEditing ? targetArt.id : ''}')">
+        <label style="font-weight:700; font-size:14px; margin-bottom:6px; display:block;">Article Title</label>
+        <input type="text" id="pub-title" class="in" placeholder="e.g. Complete Guide to UK Master's Intakes 2027" required value="${targetArt ? targetArt.title.replace(/"/g, '&quot;') : ''}">
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+          <div>
+            <label style="font-weight:700; font-size:14px; margin-bottom:6px; display:block;">Category</label>
+            <select id="pub-category" class="in" style="height: 48px;">
+              <option value="Admissions" ${targetArt && targetArt.category === 'Admissions' ? 'selected' : ''}>Admissions</option>
+              <option value="Universities" ${targetArt && targetArt.category === 'Universities' ? 'selected' : ''}>Universities</option>
+              <option value="Visa" ${targetArt && targetArt.category === 'Visa' ? 'selected' : ''}>Visa &amp; Immigration</option>
+              <option value="Careers" ${targetArt && targetArt.category === 'Careers' ? 'selected' : ''}>Careers &amp; Jobs</option>
+              <option value="Finance" ${targetArt && targetArt.category === 'Finance' ? 'selected' : ''}>Scholarships &amp; Finance</option>
+            </select>
+          </div>
+          <div>
+            <label style="font-weight:700; font-size:14px; margin-bottom:6px; display:block;">Author Name</label>
+            <input type="text" id="pub-author" class="in" placeholder="e.g. EzAssign Advisory Team" value="${targetArt ? targetArt.author.replace(/"/g, '&quot;') : ''}">
+          </div>
+        </div>
+
+        <label style="font-weight:700; font-size:14px; margin-bottom:6px; display:block;">Cover Image (Upload from Gallery)</label>
+        <div style="display: flex; gap: 12px; align-items: center; margin-bottom: 12px;">
+          <input type="file" id="pub-img-file" class="in" accept="image/*" onchange="handleGalleryImageUpload(this)" style="margin: 0; padding: 10px;">
+        </div>
+        <div id="image-preview-container" style="margin-bottom: 12px; ${uploadedImageBase64 ? '' : 'display:none;'}">
+          <img id="img-preview-tag" src="${uploadedImageBase64 || ''}" style="max-height: 140px; border-radius: 12px; object-fit: cover;">
+        </div>
+
+        <label style="font-weight:700; font-size:14px; margin-bottom:6px; display:block;">Short Summary Description</label>
+        <textarea id="pub-desc" class="in" rows="2" placeholder="Brief overview for card preview..." required>${targetArt ? targetArt.desc : ''}</textarea>
+
+        <label style="font-weight:700; font-size:14px; margin-bottom:6px; display:block;">Article Body Content</label>
+        <div class="editor-tb">
+          <button type="button" class="tb-btn" onclick="execCmd('bold')"><i class="fa-solid fa-bold"></i></button>
+          <button type="button" class="tb-btn" onclick="execCmd('italic')"><i class="fa-solid fa-italic"></i></button>
+          <button type="button" class="tb-btn" onclick="execCmd('formatBlock', 'h2')">H2</button>
+          <button type="button" class="tb-btn" onclick="execCmd('insertUnorderedList')"><i class="fa-solid fa-list-ul"></i></button>
+        </div>
+        <div id="pub-content" class="editor-box" contenteditable="true">
+          ${targetArt ? targetArt.content : '<p>Write your detailed guide here...</p>'}
+        </div>
+
+        <button type="submit" class="btn or wide" style="margin-top: 24px;">
+          ${isEditing ? 'Save Changes' : 'Publish Article Now'}
+        </button>
+      </form>
+    </section>
+  `;
+}
+
+function handleGalleryImageUpload(input) {
+  if (input.files && input.files[0]) {
+    const reader = new FileReader();
+    reader.onload = function(e) {
+      uploadedImageBase64 = e.target.result;
+      const previewContainer = document.getElementById('image-preview-container');
+      const previewImg = document.getElementById('img-preview-tag');
+      if (previewContainer && previewImg) {
+        previewImg.src = uploadedImageBase64;
+        previewContainer.style.display = 'block';
+      }
+    };
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+
+function execCmd(cmd, value = null) {
+  document.execCommand(cmd, false, value);
+}
+
+function handlePublishSubmit(e, editId) {
+  e.preventDefault();
+  const title = document.getElementById('pub-title').value.trim();
+  const category = document.getElementById('pub-category').value;
+  const author = document.getElementById('pub-author').value.trim() || 'EzAssign Editorial Desk';
+  const img = uploadedImageBase64 || DEFAULT_FALLBACK_IMG;
+  const desc = document.getElementById('pub-desc').value.trim();
+  const content = document.getElementById('pub-content').innerHTML;
+
+  if (editId) {
+    const artIndex = articles.findIndex(a => a.id === editId);
+    if (artIndex !== -1) {
+      articles[artIndex] = {
+        ...articles[artIndex],
+        title,
+        category,
+        author,
+        img,
+        desc,
+        content
+      };
+      saveArticles();
+      go(editId);
+    }
+  } else {
+    const slug = title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+    const newArt = {
+      id: slug || `post-${Date.now()}`,
+      title,
+      category,
+      author,
+      date: 'Just Now',
+      timestamp: Date.now(),
+      readTime: '5 min read',
+      isPinned: false,
+      likes: 0,
+      img,
+      desc,
+      content
+    };
+    articles.unshift(newArt);
+    saveArticles();
+    go(newArt.id);
+  }
+}
+
+function renderSupport() {
+  const app = document.getElementById('app');
+  app.innerHTML = `
+    <section class="sec" style="max-width: 700px; margin: 40px auto; text-align: center;">
+      <div class="lbl"><i class="fa-solid fa-headset"></i> Academic Advisory Support</div>
+      <h2 class="big" style="margin: 12px auto 24px;">Get One-on-One Student Consultation</h2>
+      <p style="color: var(--mut); margin-bottom: 32px;">Reach our advisory desk directly for support.</p>
+      
+      <div style="background: var(--cd); border: 1px solid var(--ln); padding: 32px; border-radius: 28px; text-align: left;">
+        <form onsubmit="alert('Thank you! An EzAssign academic advisor will contact you within 2 hours.'); go('home'); return false;">
+          <label style="font-weight:700; font-size:14px; margin-bottom:6px; display:block;">Full Name</label>
+          <input type="text" class="in" placeholder="John Doe" required>
+
+          <label style="font-weight:700; font-size:14px; margin-bottom:6px; display:block;">Email Address</label>
+          <input type="email" class="in" placeholder="john@example.com" required>
+
+          <label style="font-weight:700; font-size:14px; margin-bottom:6px; display:block;">Target Intake / Query</label>
+          <input type="text" class="in" placeholder="e.g. UK Jan 2027 intake SOP review" required>
+
+          <button type="submit" class="btn or wide" style="margin-top: 12px;">Request Free Callback</button>
+        </form>
+      </div>
+    </section>
+  `;
+}
+
+renderHome();
+</script>
+</body>
+</html>
